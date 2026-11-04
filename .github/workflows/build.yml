@@ -21,6 +21,13 @@ jobs:
         distribution: 'temurin'
         cache: maven
 
+    - name: Download & Install Duels Dependency to Local Maven
+      run: |
+        curl -sL "https://jitpack.io/com/github/dumbo-the-developer/Duels/master-SNAPSHOT/Duels-master-SNAPSHOT.jar" -o Duels.jar || true
+        if [ -f Duels.jar ]; then
+          mvn install:install-file -Dfile=Duels.jar -DgroupId=com.github.dumbo-the-developer -DartifactId=Duels -Dversion=master-SNAPSHOT -Dpackaging=jar
+        fi
+
     - name: Build with Maven
       run: mvn clean package --file pom.xml
 
