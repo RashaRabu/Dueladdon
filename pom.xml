@@ -29,6 +29,15 @@
             <id>enginehub-maven</id>
             <url>https://maven.enginehub.org/repo/</url>
         </repository>
+        <!-- Repository tambahan untuk Duels API -->
+        <repository>
+            <id>codemc-repo</id>
+            <url>https://repo.codemc.io/repository/maven-public/</url>
+        </repository>
+        <repository>
+            <id>jitpack.io</id>
+            <url>https://jitpack.io</url>
+        </repository>
     </repositories>
 
     <dependencies>
