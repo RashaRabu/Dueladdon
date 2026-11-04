@@ -1,0 +1,5 @@
+name: DuelsAddon
+version: 1.1.0
+main: id.mawismp.duelsaddon.DuelsAddonExtension
+author: RabuSoore
+description: Native Duels Extension for WorldEdit/FAWE Arena Reset, Tiered Ranks, Multi-line Broadcasts & Placeholders.
