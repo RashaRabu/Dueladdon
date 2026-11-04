@@ -1,0 +1,106 @@
+# ======================================================
+#       DUELS ADDON OPTIMIZED EXTENSION CONFIG v1.1
+# ======================================================
+
+arena-reset:
+  enabled: true
+  # Delay (dalam tick) sebelum arena di-reset setelah match selesai (20 ticks = 1 detik)
+  reset-delay-ticks: 40
+  # Jika true, pembersihan item tercecer di arena akan dilakukan setelah paste
+  clear-dropped-items: true
+  # Radius pembersihan entity (item/arrow) dari titik paste
+  clear-radius: 50
+
+ranks:
+  LT5:
+    display-name: "&7[LT5] Low Tier V"
+    min-elo: 0
+    max-elo: 999
+
+  LT4:
+    display-name: "&7[LT4] Low Tier IV"
+    min-elo: 1000
+    max-elo: 1099
+
+  LT3:
+    display-name: "&7[LT3] Low Tier III"
+    min-elo: 1100
+    max-elo: 1199
+
+  LT2:
+    display-name: "&7[LT2] Low Tier II"
+    min-elo: 1200
+    max-elo: 1299
+
+  LT1:
+    display-name: "&7[LT1] Low Tier I"
+    min-elo: 1300
+    max-elo: 1399
+
+  HT5:
+    display-name: "&e[HT5] High Tier V"
+    min-elo: 1400
+    max-elo: 1499
+
+  HT4:
+    display-name: "&e[HT4] High Tier IV"
+    min-elo: 1500
+    max-elo: 1599
+
+  HT3:
+    display-name: "&e[HT3] High Tier III"
+    min-elo: 1600
+    max-elo: 1699
+
+  HT2:
+    display-name: "&e[HT2] High Tier II"
+    min-elo: 1700
+    max-elo: 1799
+
+  HT1:
+    display-name: "&e[HT1] High Tier I"
+    min-elo: 1800
+    max-elo: 1899
+
+  LTG5:
+    display-name: "&c&l[LTG5] Low Tier God V"
+    min-elo: 1900
+    max-elo: 1999
+
+  LTG4:
+    display-name: "&c&l[LTG4] Low Tier God IV"
+    min-elo: 2000
+    max-elo: 2099
+
+  LTG3:
+    display-name: "&c&l[LTG3] Low Tier God III"
+    min-elo: 2100
+    max-elo: 2199
+
+  LTG2:
+    display-name: "&c&l[LTG2] Low Tier God II"
+    min-elo: 2200
+    max-elo: 2299
+
+  LTG1:
+    display-name: "&4&l[LTG1] Low Tier God I"
+    min-elo: 2300
+    max-elo: -1
+
+announcement:
+  # Mendukung multi-line (List) maupun single string biasa
+  broadcast-messages:
+    - "&8&m--------------------------------------------------"
+    - "&b&lRANK UP! &fPemain &e%player% &ftelah naik peringkat!"
+    - "&7Dari: %old_rank% &7➜ Ke: %new_rank%"
+    - "&8&m--------------------------------------------------"
+  
+  title:
+    enabled: true
+    header: "&a&lRANK UP!"
+    footer: "&fSelamat! Kamu mencapai %new_rank%"
+    
+  sound:
+    enabled: true
+    type: "UI_TOAST_CHALLENGE_COMPLETE"
+    
