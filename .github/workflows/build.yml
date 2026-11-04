@@ -14,6 +14,12 @@ jobs:
     - name: Checkout Addon Repository
       uses: actions/checkout@v4
 
+    - name: Checkout Duels Source Repository
+      uses: actions/checkout@v4
+      with:
+        repository: 'dumbo-the-developer/Duels'
+        path: 'duels-src'
+
     - name: Set up JDK 17
       uses: actions/setup-java@v4
       with:
@@ -21,9 +27,8 @@ jobs:
         distribution: 'temurin'
         cache: maven
 
-    - name: Clone & Install Duels API to Local Maven
+    - name: Install Duels API to Local Maven Repository
       run: |
-        git clone https://github.com/dumbo-the-developer/Duels.git duels-src
         cd duels-src
         mvn clean install -DskipTests
         cd ..
