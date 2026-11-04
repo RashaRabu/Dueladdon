@@ -29,6 +29,10 @@
             <id>enginehub-maven</id>
             <url>https://maven.enginehub.org/repo/</url>
         </repository>
+        <repository>
+            <id>jitpack.io</id>
+            <url>https://jitpack.io</url>
+        </repository>
     </repositories>
 
     <dependencies>
@@ -50,11 +54,10 @@
             <version>7.2.15</version>
             <scope>provided</scope>
         </dependency>
-        <!-- Dependency resmi Duels API yang ter-install dari local build -->
         <dependency>
-            <groupId>me.realized</groupId>
+            <groupId>com.github.Realizedd.Duels</groupId>
             <artifactId>duels-api</artifactId>
-            <version>3.5.0</version>
+            <version>3.5.1</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>
