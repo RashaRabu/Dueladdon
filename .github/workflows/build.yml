@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout Repository
+    - name: Checkout Addon Repository
       uses: actions/checkout@v4
 
     - name: Set up JDK 17
@@ -21,14 +21,14 @@ jobs:
         distribution: 'temurin'
         cache: maven
 
-    - name: Download & Install Duels Dependency to Local Maven
+    - name: Clone & Install Duels API to Local Maven
       run: |
-        curl -sL "https://jitpack.io/com/github/dumbo-the-developer/Duels/master-SNAPSHOT/Duels-master-SNAPSHOT.jar" -o Duels.jar || true
-        if [ -f Duels.jar ]; then
-          mvn install:install-file -Dfile=Duels.jar -DgroupId=com.github.dumbo-the-developer -DartifactId=Duels -Dversion=master-SNAPSHOT -Dpackaging=jar
-        fi
+        git clone https://github.com/dumbo-the-developer/Duels.git duels-src
+        cd duels-src
+        mvn clean install -DskipTests
+        cd ..
 
-    - name: Build with Maven
+    - name: Build DuelsAddon with Maven
       run: mvn clean package --file pom.xml
 
     - name: Upload Compiled JAR Artifact
